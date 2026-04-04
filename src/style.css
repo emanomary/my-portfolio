@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s ease-out forwards;
+}
+
+.swiper {
+  width: 100%;
+  /* height: 100%; */
+}
+
+/* لجعل النقاط السفلية تظهر بوضوح */
+.swiper-pagination-bullet-active {
+  background: #924f97 !important;
+  /* لون fuchsia-700 */
+}
+
+.nav-item{
+  scroll-margin-top: 100px;
+}
+
+/* الكود داخل ملف الـ CSS الخاص بك */
+.nav-item.active {
+    color: #924f97 !important; /* اللون البنفسجي */
+}
+
+.nav-item.active::after {
+  content: ''; 
+  width: 100% ; /* الخط يظهر كاملاً */
+  left: 0 ;
+  transform: none;
+  background-color: #924f97 ; /* اللون البنفسجي */
+  position: absolute ;
+  bottom:0;
+  height: 2px;
+}
+
+.level{
+  content: attr(data-level); 
+  left: content;
+  transform: translateX(-100%);
+}

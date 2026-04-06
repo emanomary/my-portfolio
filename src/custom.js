@@ -64,7 +64,7 @@ window.addEventListener('resize', () => {
     if (window.scrollY > 50) {
       // التنسيق عند التمرير للأسفل (أبيض مع ظل)
       header.classList.remove('lg:bg-transparent');
-      header.classList.add('bg-[#dcb6de]', 'shadow-md', 'py-2'); // py-2 لتصغير حجم الهيدر قليلاً عند السكرول
+      header.classList.add('md:bg-[#dcb6de]','sm:bg-[#dcb6de]','lg:bg-white', 'shadow-md', 'py-2'); // py-2 لتصغير حجم الهيدر قليلاً عند السكرول
 
     } else {
       // التنسيق الأصلي عند العودة للأعلى

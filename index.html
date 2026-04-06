@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/my-portfolio/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="my-portfolio for display my projects and skills">
+  <meta name="keywords"
+    content="my-portfolio, portfolio, projects, skills, eman kullab, Eman Kullab, web developer, frontend, backend">
+  <meta name="author" content="Eman Kullab">
+  <meta name="robots" content="index, follow">
+  <title>Eman Kullab Portfolio</title>
+  <script type="module" crossorigin src="/my-portfolio/assets/index-DCaau4C7.js"></script>
+  <link rel="stylesheet" crossorigin href="/my-portfolio/assets/index-CbQHeRcq.css">
+</head>
+
+<body>
+  <!-- go top button -->
+  <a href="#" id="go-top" class="fixed bottom-4 right-4 bg-[#dcb6de] text-[#924f97] flex items-center justify-center w-8 h-8 shrink-0 p-2 rounded-full shadow-lg 
+    hover:bg-[#924f97] hover:text-white transition-colors duration-300" aria-label="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- background -->
+  <div class="absolute inset-0 flex h-screen" aria-hidden="true">
+    <div class="w-[60%] bg-white"></div>
+    <div class="w-[40%] bg-[#dcb6de]"></div>
+  </div>
+
+  <!-- header -->
+  <header id="main-header"
+    class="fixed top-0 left-0 bg-white lg:bg-transparent z-50 w-full overflow-hidden transition-all duration-300">
+    <nav aria-label="Global" class="mx-auto flex max-w-6xl items-center justify-between py-6 px-6">
+      <!-- logo -->
+      <div class="flex lg:flex-1">
+        <a href="index.html" class="-m-1.5 p-1.5">
+          <span class="sr-only uppercase">eman kullab</span>
+          <h1 id="logo-text" class="uppercase font-extrabold text-xl text-gray-800 tracking-widest ">eman
+            kullab</h1>
+        </a>
+      </div>
+      <!-- bar menu -->
+      <div class="flex lg:hidden">
+        <button onclick="toggleMenu()" class="flex items-center gap-2 text-gray-800 group" title="mobile menu">
+          <span class="text-md font-larg uppercase tracking-widest"></span>
+          <svg id="menu-icon" class="size-6 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <!-- main menu -->
+      <div class="hidden lg:flex lg:gap-x-12 capitalize" id="navbar">
+        <a href="#home"
+          class="nav-item group relative text-lg font-semibold pb-2 transition-colors duration-300 text-gray-900 hover:text-[#924f97] [&.active]:text-[#924f97]">
+          home
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 w-0 
+            group-hover:w-full group-[.active]:w-full"></span>
+        </a>
+
+        <a href="#about"
+          class="nav-item group relative text-lg font-semibold pb-2 transition-colors duration-300 text-gray-900 hover:text-[#924f97] [&.active]:text-[#924f97]">
+          about
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+               w-0 
+               group-hover:w-full 
+               group-[.active]:w-full"></span>
+        </a>
+
+        <a href="#skills"
+          class="nav-item group relative text-lg font-semibold pb-2 transition-colors duration-300 text-gray-900 hover:text-[#924f97] [&.active]:text-[#924f97] scroll-mt-30">
+          skills
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+               w-0 
+               group-hover:w-full 
+               group-[.active]:w-full"></span>
+        </a>
+
+        <a href="#projects"
+          class="nav-item group relative text-lg font-semibold pb-2 transition-colors duration-300 text-gray-900 hover:text-[#924f97] [&.active]:text-[#924f97] scroll-mt-30">
+          projects
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+               w-0 
+               group-hover:w-full 
+               group-[.active]:w-full"></span>
+        </a>
+        <a href="#resume"
+          class="nav-item group relative text-lg font-semibold pb-2 transition-colors duration-300 text-gray-900 hover:text-[#924f97] [&.active]:text-[#924f97] scroll-mt-30">
+          resume
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+               w-0 
+               group-hover:w-full 
+               group-[.active]:w-full"></span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- mobile menu -->
+    <div id="mobile-nav" class="max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out">
+      <nav class="flex flex-col gap-6 p-6">
+
+        <a href="#home" class="nav-item active group relative w-fit text-lg font-semibold pb-2 transition-all duration-300 
+              text-gray-900 
+              hover:text-[#924f97] 
+              [&.active]:text-[#924f97]">
+          Home
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+                   w-0 
+                   group-hover:w-full 
+                   group-[.active]:w-full"></span>
+        </a>
+
+        <a href="#about" class="nav-item group relative w-fit text-lg font-medium pb-2 transition-all duration-300 
+              text-gray-900 
+              hover:text-[#924f97] 
+              [&.active]:text-[#924f97]">
+          About
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+                   w-0 
+                   group-hover:w-full 
+                   group-[.active]:w-full"></span>
+        </a>
+
+        <a href="#skills" class="nav-item group relative w-fit text-lg font-medium pb-2 transition-all duration-300 
+              text-gray-900 
+              hover:text-[#924f97] 
+              [&.active]:text-[#924f97]">
+          Skills
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+                   w-0 
+                   group-hover:w-full 
+                   group-[.active]:w-full"></span>
+        </a>
+        <a href="#projects" class="nav-item group relative w-fit text-lg font-medium pb-2 transition-all duration-300 
+              text-gray-900 
+              hover:text-[#924f97] 
+              [&.active]:text-[#924f97]">
+          projects
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+                   w-0 
+                   group-hover:w-full 
+                   group-[.active]:w-full"></span>
+        </a>
+        <a href="#resume" class="nav-item group relative w-fit text-lg font-medium pb-2 transition-all duration-300 
+              text-gray-900 
+              hover:text-[#924f97] 
+              [&.active]:text-[#924f97]">
+          resume
+          <span class="absolute bottom-0 left-0 h-0.5 bg-[#924f97] transition-all duration-300 
+                   w-0 
+                   group-hover:w-full 
+                   group-[.active]:w-full"></span>
+        </a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero section -->
+    <section class="py-20 overflow-hidden" id="home">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+        <div class="space-y-6 z-20 md:col-span-4" data-aos="fade-up">
+          <span class="text-[#924f97] tracking-widest uppercase font-semibold">Hello</span>
+          <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mt-3">
+            I'm <span class="text-[#924f97]">Eman Kullab</span><br>
+            From <span class="text-gray-900">Gaza</span>
+          </h1>
+          <p class="text-2xl text-gray-800 font-medium italic border-l-4 border-[#924f97] pl-4">
+            I'm <span class="typed"
+              data-typed-items="Web Developer, Frontend Developer, Backend Developer, Software Engineer"></span>
+          </p>
+          <div class="pt-4">
+            <a href="https://wa.me/972599445725" target="_blank" rel="noopener noreferrer"
+              class="inline-block px-10 py-3 border-2 border-[#924f97] text-[#924f97] uppercase tracking-widest hover:[#924f97] hover:text-white hover:bg-[#924f97] transition-all font-bold shadow-lg hover:shadow-fuchsia-200">
+              contact me
+            </a>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500"
+          class="relative w-full md:col-span-8 aspect-square md:aspect-4/3 shadow-lg overflow-hidden rounded-lg swiper mySwiper">
+          <div class="swiper-wrapper w-full h-full">
+            <div class="swiper-slide">
+              <img src="/my-portfolio/images/slider1.jpeg" alt="Project 1" class="w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide cursor-grab active:cursor-grabbing">
+              <img src="/my-portfolio/images/slider2.jpeg" alt="Project 2" class="w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide cursor-grab active:cursor-grabbing">
+              <img src="/my-portfolio/images/slider3.jpeg" alt="Project 2" class="w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide cursor-grab active:cursor-grabbing">
+              <img src="/my-portfolio/images/slider4.jpeg" alt="Project 2" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about me section -->
+    <section id="about" class="py-20 max-w-6xl mx-auto relative grid grid-cols-1 md:grid-cols-2 gap-10 px-6">
+      <div class="relative group" data-aos="fade-right">
+        <img src="/my-portfolio/images/946155b2-4b56-4193-94fe-430d1182a440.jfif" alt=""
+          class="hidden md:block lg:block w-full h-full object-cover shadow-xl relative z-0">
+        <div class="hidden lg:block absolute -left-15 top-10 h-50 w-30 bg-[#924f97] -z-10">
+        </div>
+        <div class="hidden lg:block absolute -right-10 bottom-20 h-30 w-40 bg-[#924f97] -z-10"></div>
+      </div>
+      <div class="py-10" data-aos="fade-left">
+        <span class="text-gray-800 tracking-widest uppercase">welcome</span>
+        <h3 class="text-4xl font-bold mt-5 mb-8">About Me</h3>
+        <p class="text-md leading-7 text-justify text-gray-500">Backend Web Developer with over 7 years of professional
+          experience specializing in PHP and Laravel. Extensive background in developing scalable web applications,
+          RESTful APIs, and e-commerce platforms. Experienced in government-sector projects and educational platforms.
+          Strong knowledge of database design, payment gateway integration, and version control systems.
+        </p>
+        <div class="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+          <div>
+            <i class="fa-brands fa-laravel text-5xl text-[#dcb6de] mx-1"></i>
+            <i class="fa-brands fa-php text-5xl text-[#dcb6de] mx-1"></i>
+            <h3 class="text-left text-xl font-medium mt-5 mb-3 capitalize">Backend Web Developer</h3>
+            <p class="pt-2 text-md leading-7 text-justify text-gray-500">Ministry of Education and Higher Education –
+              Gaza</p>
+            <p class="pt-2 text-md leading-7 text-justify text-gray-500">E-Learning Department - 2017 – Present</p>
+          </div>
+          <div>
+            <i class="fa-brands fa-bootstrap text-5xl text-[#dcb6de] mx-1"></i>
+            <i class="fa-brands fa-tailwind-css text-5xl text-[#dcb6de] mx-1"></i>
+            <h3 class="text-left text-xl font-medium mt-5 mb-3 capitalize">frontend Web Developer</h3>
+            <p class="pt-2 text-md leading-7 text-justify text-gray-500">
+              Front-end Developer specializing in Tailwind CSS & Bootstrap. Expert in crafting responsive, mobile-first
+              interfaces and custom UI components.
+            </p>
+          </div>
+          <div class="h-30 w-[350] bg-[#924f97] -z-10 ">
+            <p
+              class="uppercase text-white pl-5 py-3 text-2xl font-bold tracking-widest flex items-center justify-center">
+              more than 9 projects finished
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section -->
+    <section id="skills" class="py-20 mx-auto bg-[#f2f2f2] text-center">
+      <span class="text-gray-800 tracking-widest uppercase">Technical Skills</span>
+      <h3 class="text-4xl font-bold mt-5 mb-8 capitalize">my skills</h3>
+      <div class="max-w-6xl px-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 text-gray-500"
+        data-aos="fade-up">
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">laravel</span>
+            <span class="absolute text-md font-medium left-[80%] -translate-x-full">80%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[80%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">php</span>
+            <span class="absolute text-md font-medium left-[80%] -translate-x-full">80%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[80%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">html</span>
+            <span class="absolute text-md font-medium left-[95%] -translate-x-full">95%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[95%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">css</span>
+            <span class="absolute text-md font-medium left-[85%] -translate-x-full">85%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[85%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">bootstrap</span>
+            <span class="absolute text-md font-medium left-[75%] -translate-x-full">75%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[75%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">tailwind</span>
+            <span class="absolute text-md font-medium left-[70%] -translate-x-full">70%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[70%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">Javascript</span>
+            <span class="absolute text-md font-medium left-[70%] -translate-x-full">70%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[70%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">Git & GitHub</span>
+            <span class="absolute text-md font-medium left-[80%] -translate-x-full">80%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[80%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">MySQL</span>
+            <span class="absolute text-md font-medium left-[85%] -translate-x-full">85%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[85%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="relative text-left mb-2">
+            <span class="text-md font-medium uppercase">RESTful APIs</span>
+            <span class="absolute text-xl font-medium left-[70%] -translate-x-full">70%</span>
+          </div>
+          <div class="w-full bg-[#dcb6de] rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-[#924f97] h-4 rounded-2xl w-[70%]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-[#924f97] w-full text-white capitalize py-20">
+      <div class="max-w-6xl mx-auto px-6 grid grid-col-1 lg:flex lg:items-center lg:justify-between  gap-10">
+        <p class="text-5xl">i'm <span class="font-bold">available</span> for freelancing</p>
+        <a href="https://wa.me/972599445725" target="_blank" rel="noopener noreferrer" data-aos="flip-right"
+          class="w-40 gap-10 px-4 py-5 bg-white text-[#924f97] uppercase tracking-widest hover:bg-[#f2f2f2] hover:text-[#924f97] transition-all font-bold text-[16px] text-center">
+          contact me
+        </a>
+      </div>
+    </div>
+
+    <!-- projects -->
+    <section id="projects" class="py-20 max-w-6xl mx-auto text-center">
+      <span class="text-gray-800 tracking-widest uppercase">accomplishments</span>
+      <h3 class="text-4xl font-bold mt-5 mb-8 capitalize">my projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6" data-aos="fade-down"
+        data-aos-easing="linear" data-aos-duration="1000">
+
+        <!-- rawafed portal -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/1.PNG" alt="Rawafed Portal"
+              class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                Rawafed Portal
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                Laravel • Bootstrap • HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <span class="px-2 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="https://rawafed.edu.ps/ar/portal" title="rawafed portal link" target="_blank"
+                    rel="noopener noreferrer" aria-label="Rawafed Portal project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span>
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    backend
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- portfolios -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/2.PNG" alt="Teachers Portfolios"
+              class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                Teachers Portfolios
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                Laravel • Bootstrap • HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <span class="px-4 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="https://www.rawafed.edu.ps/ar/portfolios" title="Teachers Portfolios link" target="_blank"
+                    rel="noopener noreferrer" aria-label="Teachers Portfolios project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span>
+
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    backend
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tv -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/3.PNG" alt="Rawafed TV"
+              class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                Rawafed TV
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                Laravel • Bootstrap • HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <span class="px-4 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="https://www.rawafed.edu.ps/ar/tv" title="rawafed portal link" target="_blank"
+                    rel="noopener noreferrer" aria-label="Rawafed TV project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span>
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    backend
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- digit marketing -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/4.PNG" alt="digit marketing"
+              class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                Digit Marketing
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                Bootstrap • HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <span class="px-4 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="https://emanomary.github.io/digit-marketing/" title="digit marketing link" target="_blank"
+                    rel="noopener noreferrer" aria-label="Digit Marketing project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span>
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    frontend
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- living -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/5.PNG" alt="Living"
+              class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                Living
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <span class="px-4 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="https://emanomary.github.io/living/" title="Living link" target="_blank"
+                    rel="noopener noreferrer" aria-label="Living project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span>
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    frontend
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- radio -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/6.PNG" alt="Radio" class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                Radio
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                Laravel • Bootstrap • HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <!-- <span class="px-4 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="#" title="Radio link" target="_blank" rel="noopener noreferrer" aria-label="Radio project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span> -->
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    backend
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- almadar news -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/7.PNG" alt="Al Madar News"
+              class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                almadar news
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                Laravel • Bootstrap • HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <!-- <span class="px-4 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="#" title="Al Madar News link" target="_blank" rel="noopener noreferrer" aria-label="Al Madar News project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span> -->
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    backend
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- News -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/9.PNG" alt="News" class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                News
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                Laravel • Bootstrap • HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <!-- <span class="px-4 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="#" title="Shop Us link" target="_blank" rel="noopener noreferrer" aria-label="News project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span> -->
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    backend
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- management system -->
+        <div class="group overflow-hidden transition-all duration-300 dark:bg-slate-800">
+          <div class="relative h-48 overflow-hidden rounded-md">
+            <img src="/my-portfolio/images/10.PNG" alt="Product management system"
+              class="h-full w-full object-cover transition-transform duration-500" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center 
+                opacity-0 group-hover:opacity-100 
+                bg-linear-to-r from-[#924f97]/95 via-[#924f97]/80 to-transparent 
+                backdrop-blur-sm transition-all duration-500 ease-in-out">
+              <h3
+                class="text-white text-2xl font-bold mb-2 transform translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
+                Product management system
+              </h3>
+              <p
+                class="text-white/90 text-sm mb-6 transform translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0">
+                HTML • CSS • Javascript
+              </p>
+              <div
+                class="flex gap-3 transform translate-y-4 transition-transform duration-500 delay-150 group-hover:translate-y-0">
+                <span class="px-4 py-2 bg-white text-[#924f97] text-xs font-bold rounded-full uppercase">
+                  <a href="https://emanomary.github.io/product-managment/" title="Product management system link"
+                    target="_blank" rel="noopener noreferrer" aria-label="Product management system project link">
+                    visit
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </span>
+                <span
+                  class="group/btn relative inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider text-white overflow-hidden rounded-full transition-all duration-300">
+
+                  <span
+                    class="absolute inset-0 bg-linear-to-r from-slate-700 to-slate-900 transition-all duration-300 group-hover/btn:from-slate-800 group-hover/btn:to-black"></span>
+
+                  <span
+                    class="absolute inset-0 border border-white/20 rounded-full group-hover/btn:border-[#924f97]/50 transition-all duration-300"></span>
+
+                  <span class="relative flex items-center gap-2 uppercase">
+                    fullstack
+                    <code
+                      class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded font-mono group-hover/btn:bg-[#924f97]/30 transition-colors duration-300">
+                      &lt;/&gt;
+                    </code>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- education -->
+    <section class="py-20 bg-[#f2f2f2] text-center" id="resume">
+      <div class="max-w-6xl mx-auto px-3">
+        <span class="text-gray-800 tracking-widest uppercase">Resume</span>
+        <h3 class="text-4xl font-bold mt-5 mb-10 capitalize">my education & experience</h3>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto p-6 lg:p-6">
+        <div class="relative space-y-10">
+          <h4 class="text-2xl font-black text-[#924f97] dark:text-white mb-6 flex items-center gap-3">
+            Education
+          </h4>
+
+          <div class="absolute left-4 top-20 h-[calc(100%-80px)] border-l-2 border-dashed border-[#924f97] opacity-30">
+          </div>
+
+          <div class="relative pl-12 group" data-aos="fade-up">
+            <div
+              class="absolute left-0 top-1 z-10 w-8 h-8 rounded-full border-4 border-white dark:border-slate-800 bg-[#924f97] shadow-md group-hover:scale-125 transition-transform duration-300">
+            </div>
+            <div
+              class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-[#924f97]">
+              <span
+                class="text-[#924f97] text-xs font-bold bg-[#924f97]/10 px-3 py-1 rounded-full mb-3 inline-block">2009 -
+                2010</span>
+              <h5 class="font-bold text-slate-800 dark:text-white text-lg leading-tight mb-2">Education Qualification in
+                Education Methodology</h5>
+              <p class="text-sm font-semibold text-slate-500 italic">Islamic University of Gaza - Palestine</p>
+            </div>
+          </div>
+
+          <div class="relative pl-12 group" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="absolute left-0 top-1 z-10 w-8 h-8 rounded-full border-4 border-white dark:border-slate-800 bg-[#924f97] shadow-md group-hover:scale-125 transition-transform duration-300">
+            </div>
+            <div
+              class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-[#924f97]">
+              <span
+                class="text-[#924f97] text-xs font-bold bg-[#924f97]/10 px-3 py-1 rounded-full mb-3 inline-block">2004 -
+                2008</span>
+              <h5 class="font-bold text-slate-800 dark:text-white text-lg leading-tight mb-2 ">Bachelor’s
+                Degree in Information Technology Systems</h5>
+              <p class="text-sm font-semibold text-slate-500 italic">Islamic University of Gaza - Palestine</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative space-y-10">
+          <h4 class="text-2xl font-black text-[#924f97] dark:text-white mb-6 flex items-center gap-3">
+            Experience
+          </h4>
+
+          <div class="absolute left-4 top-20 h-[calc(100%-80px)] border-l-2 border-dashed border-[#924f97] opacity-30">
+          </div>
+
+          <div class="relative pl-12 group" data-aos="fade-up">
+            <div
+              class="absolute left-0 top-1 z-10 w-8 h-8 rounded-full border-4 border-white dark:border-slate-800 bg-[#924f97] shadow-md group-hover:scale-125 transition-transform duration-300">
+            </div>
+            <div
+              class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-[#924f97]">
+              <span
+                class="text-[#924f97] text-xs font-bold bg-[#924f97]/10 px-3 py-1 rounded-full mb-3 inline-block">2015 -
+                Present</span>
+              <h5 class="font-bold text-slate-800 dark:text-white text-lg leading-tight mb-2">Web Developer (Backend)
+              </h5>
+              <p class="text-sm font-semibold text-slate-500 italic">Ministry of Education and Higher Education – Gaza
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                E-Learning Department - 2017 – Present
+              </p>
+            </div>
+          </div>
+
+          <div class="relative pl-12 group" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="absolute left-0 top-1 z-10 w-8 h-8 rounded-full border-4 border-white dark:border-slate-800 bg-[#924f97] shadow-md group-hover:scale-125 transition-transform duration-300">
+            </div>
+            <div
+              class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-[#924f97]">
+              <span
+                class="text-[#924f97] text-xs font-bold bg-[#924f97]/10 px-3 py-1 rounded-full mb-3 inline-block">2008 -
+                2014</span>
+              <h5 class="font-bold text-slate-800 dark:text-white text-lg leading-tight mb-2 uppercase">Teacher Of
+                Information Technology</h5>
+              <p class="text-sm font-semibold text-slate-500 italic">Ministry of Education and Higher Education – Gaza
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                Directorate of Education - West Gaza
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <!-- <section id="contact" class="pt-20 max-w-6xl mx-auto text-center">
+      <span class="text-gray-800 tracking-widest uppercase">contact</span>
+      <h3 class="text-4xl font-bold mt-5 mb-8 capitalize">contact me</h3>
+      <div class="bg-[#f2f2f2] grid grid-cols-1 lg:grid-cols-2 ">
+        <img src="/images/168185166194.jpg" alt=""
+          class="hidden md:block lg:block w-full h-full object-cover shadow-xl">
+        <div class="space-y-8 p-6 ">
+          <div class="flex items-start gap-5 group">
+            <div
+              class="flex items-center justify-center w-12 h-12 shrink-0 bg-[#dcb6de] rounded-full transition-colors duration-300 group-hover:bg-[#924f97]">
+              <i class="fa-solid fa-location-dot text-[#924f97] text-xl group-hover:text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-slate-800 mb-1 text-left">Location:</h4>
+              <p class="text-slate-600 font-medium">Palestine, Gaza Strip</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 group">
+            <div
+              class="flex items-center justify-center w-12 h-12 shrink-0 bg-[#dcb6de] rounded-full transition-colors duration-300 group-hover:bg-[#924f97]">
+              <i class="fa-regular fa-envelope text-[#924f97] text-xl group-hover:text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-slate-800 mb-1 text-left">Email:</h4>
+              <p class="text-slate-600 font-medium">emankullab@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 group">
+            <div
+              class="flex items-center justify-center w-12 h-12 shrink-0 bg-[#dcb6de] rounded-full transition-colors duration-300 group-hover:bg-[#924f97]">
+              <i class="fa-solid fa-mobile-screen-button text-[#924f97] text-xl group-hover:text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-slate-800 mb-1 text-left">Call:</h4>
+              <p class="text-slate-600 font-medium">+972 599445725</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  </main>
+
+  <!-- footer -->
+  <footer id="main-footer" class="bg-[#924f97] text-white p-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto gap-10 mb-6">
+      <div>
+        <div class="flex lg:flex-1 mb-5">
+          <a href="index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only uppercase">eman kullab</span>
+            <h1 id="logo-text" class="uppercase font-extrabold text-xl text-white tracking-widest ">eman
+              kullab</h1>
+          </a>
+        </div>
+        <div class="max-w-6xl">
+          <p class="text-lg font-medium text-left mb-3">Web Developer</p>
+          <div class="text-left flex gap-3">
+            <a href="https://www.facebook.com/eman.kullab.284887" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook profile link"
+              class="text-white bg-[#dcb6de] hover:text-[#924f97] flex items-center justify-center w-8 h-8 shrink-0 rounded-full">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/eman_bader_kullab?igsh=MW1vaG11ZzB3b3p4" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram profile link"
+              class="text-white bg-[#dcb6de] hover:text-[#924f97] flex items-center justify-center w-8 h-8 shrink-0 rounded-full">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.github.com/emanomary" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub profile link"
+              class="text-white bg-[#dcb6de] hover:text-[#924f97] flex items-center justify-center w-8 h-8 shrink-0 rounded-full">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="font-bold text-2xl text-white capitalize mb-5">links</h2>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-lg text-white hover:text-[#dcb6de]"><i
+                class="fa-solid fa-arrow-right-long"></i> home</a></li>
+          <li><a href="#about" class="text-lg text-white hover:text-[#dcb6de]"><i
+                class="fa-solid fa-arrow-right-long"></i> about</a></li>
+          <li><a href="#skills" class="text-lg text-white hover:text-[#dcb6de]"><i
+                class="fa-solid fa-arrow-right-long"></i> skills</a></li>
+          <li><a href="#projects" class="text-lg text-white hover:text-[#dcb6de]"><i
+                class="fa-solid fa-arrow-right-long"></i> projects</a></li>
+          <li><a href="#resume" class="text-lg text-white hover:text-[#dcb6de]"><i
+                class="fa-solid fa-arrow-right-long"></i> resume</a></li>
+          <!-- <li><a href="#contact" class="text-lg text-white hover:text-[#dcb6de]"><i
+                class="fa-solid fa-arrow-right-long"></i> contact</a></li> -->
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-bold text-2xl text-white capitalize mb-5">services</h2>
+        <ul class="space-y-2">
+          <li><span href="#home" class="text-lg text-white"><i class="fa-solid fa-arrow-right-long"></i> web
+              developer</span></li>
+          <li><span href="#about" class="text-lg text-white"><i class="fa-solid fa-arrow-right-long"></i> frontend
+              developer</span></li>
+          <li><span href="#skills" class="text-lg text-white"><i class="fa-solid fa-arrow-right-long"></i> backend
+              developer</span></li>
+          <li><span href="#projects" class="text-lg text-white"><i class="fa-solid fa-arrow-right-long"></i> data
+              analysis</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-bold text-2xl text-white capitalize mb-5">have a questions?</h2>
+        <div class="space-y-2">
+          <div class="flex items-start gap-3 group">
+            <div
+              class="text-white bg-[#dcb6de] hover:text-[#924f97] flex items-center justify-center w-8 h-8 shrink-0 rounded-full">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <p class="text-white font-medium">Palestine, Gaza Strip</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 group">
+            <div
+              class="text-white bg-[#dcb6de] hover:text-[#924f97] flex items-center justify-center w-8 h-8 shrink-0 rounded-full">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div>
+              <p class="text-white font-medium">emankullab@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 group">
+            <div
+              class="text-white bg-[#dcb6de] hover:text-[#924f97] flex items-center justify-center w-8 h-8 shrink-0 rounded-full">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <div>
+              <p class="text-white font-medium">+972 599445725</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-md font-medium mx-auto text-center border-t border-[#dcb6de] py-5">Copyright &copy; 2026 All rights
+      reserved | This portfolio is made with &hearts; by <a href="#home"
+        class="text-white font-bold hover:underline">Eman Kullab</a>.</p>
+  </footer>
+
+</body>
+
+</html>

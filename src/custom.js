@@ -28,7 +28,7 @@ export function toggleMenu() {
     
     if (nav.classList.contains('max-h-0')) {
         nav.classList.remove('max-h-0', 'opacity-0');
-        nav.classList.add('max-h-[500px]', 'opacity-100');
+        nav.classList.add('max-h-[500px]', 'opacity-100','bg-[#dcb6de]');
         icon.style.transform = 'rotate(90deg)';
     } else {
         closeMobileMenu(); // استخدمنا دالة فرعية للتنظيم

@@ -42,7 +42,7 @@ function closeMobileMenu() {
     const nav = document.getElementById('mobile-nav');
     const icon = document.getElementById('menu-icon');
     if (nav) {
-        nav.classList.add('max-h-0', 'opacity-0');
+        nav.classList.add('max-h-0', 'opacity-0','bg-[#dcb6de]');
         nav.classList.remove('max-h-[500px]', 'opacity-100');
         icon.style.transform = 'rotate(0deg)';
     }
@@ -64,11 +64,11 @@ window.addEventListener('resize', () => {
     if (window.scrollY > 50) {
       // التنسيق عند التمرير للأسفل (أبيض مع ظل)
       header.classList.remove('lg:bg-transparent');
-      header.classList.add('bg-white', 'shadow-md', 'py-2'); // py-2 لتصغير حجم الهيدر قليلاً عند السكرول
+      header.classList.add('bg-[#dcb6de]', 'shadow-md', 'py-2'); // py-2 لتصغير حجم الهيدر قليلاً عند السكرول
 
     } else {
       // التنسيق الأصلي عند العودة للأعلى
-      header.classList.add('md:bg-white', 'sm:bg-white','lg:bg-transparent');
+      header.classList.add('md:bg-[#dcb6de]', 'sm:bg-[#dcb6de]','lg:bg-transparent');
       header.classList.remove('lg:bg-white', 'shadow-md', 'py-2');
     }
   });

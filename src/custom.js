@@ -1,11 +1,13 @@
-// import Swiper from 'swiper/bundle';
-// import 'swiper/css/bundle';
+// استيراد الستايلات
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import Typed from 'typed.js';
 /**
    * Hero type effect
    */
-
-  AOS.init();
-
   const typed = document.querySelector('.typed')
   if (typed) {
     let typed_strings = typed.getAttribute('data-typed-items')
@@ -19,24 +21,8 @@
     });
   }
 
-// function toggleMenu() {
-//     const nav = document.getElementById('mobile-nav');
-//     const icon = document.getElementById('menu-icon');
-    
-//     if (nav.classList.contains('max-h-0')) {
-//       // فتح القائمة
-//       nav.classList.remove('max-h-0', 'opacity-0');
-//       nav.classList.add('max-h-[500px]', 'opacity-100'); // قيمة كبيرة كافية للمحتوى
-//       icon.style.transform = 'rotate(90deg)';
-//     } else {
-//       // إغلاق القائمة
-//       nav.classList.add('max-h-0', 'opacity-0');
-//       nav.classList.remove('max-h-[500px]', 'opacity-100');
-//       icon.style.transform = 'rotate(0deg)';
-//     }
-//   }
 
-function toggleMenu() {
+export function toggleMenu() {
     const nav = document.getElementById('mobile-nav');
     const icon = document.getElementById('menu-icon');
     
@@ -48,6 +34,8 @@ function toggleMenu() {
         closeMobileMenu(); // استخدمنا دالة فرعية للتنظيم
     }
 }
+// تصدير الدالة لتكون متاحة في الـ HTML
+window.toggleMenu = toggleMenu;
 
 // دالة مخصصة للإغلاق فقط
 function closeMobileMenu() {
@@ -85,63 +73,58 @@ window.addEventListener('resize', () => {
     }
   });
 
-  // swipper
-  var swiper = new Swiper(".mySwiper", {
-  // 1. تحديد نوع الحركة: ظهور واختفاء
-  effect: "fade", 
-  
-  // 2. ضبط إعدادات التلاشي ليكون ناعماً جداً
-  fadeEffect: {
-    crossFade: true // هذا الخيار يمنع رؤية الخلفية أثناء الانتقال بين الصور
-  },
-
-  // 3. التكرار والتشغيل التلقائي
-  loop: true,
-  speed: 1000, // سرعة الانتقال (1000 مللي ثانية = ثانية واحدة)
-  autoplay: {
-    delay: 3000, // البقاء على كل صورة لمدة 3 ثوانٍ
-    disableOnInteraction: false,
-  },
-
-  // 4. النقاط السفلية
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-const navItems = document.querySelectorAll('.nav-item'); // تأكد أن الكلاس متطابق مع الروابط لديك
-const sections = document.querySelectorAll('section'); // أو استخدم كلاس معين للسيكشنز
+// menu active state
+// تحديد جميع عناصر القائمة (Desktop + Mobile)
+const navItems = document.querySelectorAll('.nav-item');
+const sections = document.querySelectorAll('section');
 
 const options = {
-    threshold: 0.6 // تفعيل الكلاس عندما يظهر 60% من السيكشن
+    threshold: 0.6 // تفعيل السيكشن عندما يظهر 60% منه
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // 1. الحصول على ID السيكشن الظاهر حالياً
             const id = entry.target.getAttribute('id');
             
-            // 2. إزالة active من الجميع
+            // 1. إزالة active من جميع الروابط في كل القوائم
             navItems.forEach(nav => nav.classList.remove('active'));
             
-            // 3. إضافة active للرابط الذي يشير لهذا السيكشن
-            const activeLink = document.querySelector(`.nav-item[href="#${id}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
+            // 2. البحث عن كل الروابط التي تشير لهذا السيكشن (قد يكون أكثر من رابط)
+            const activeLinks = document.querySelectorAll(`.nav-item[href="#${id}"]`);
+            
+            // 3. إضافة كلاس active لكل الروابط المطابقة
+            activeLinks.forEach(link => {
+                link.classList.add('active');
+            });
         }
     });
 }, options);
 
 // تفعيل المراقب على كل سيكشن
-sections.forEach(section => observer.observe(section));
+sections.forEach(section => {
+    if (section.id) { // التأكد أن السيكشن لديه ID
+        observer.observe(section);
+    }
+});
 
-// إضافة حدث الكليك (اختياري) للتأكد من سلاسة الانتقال
+// معالجة حدث الكليك لضمان التفاعل الفوري وإغلاق قائمة الجوال
 navItems.forEach(item => {
     item.addEventListener('click', function() {
+        // إزالة active من الجميع
         navItems.forEach(nav => nav.classList.remove('active'));
-        this.classList.add('active');
+        
+        // إضافة active لكل الروابط التي تملك نفس الـ href (للمزامنة بين القوائم)
+        const targetHref = this.getAttribute('href');
+        document.querySelectorAll(`.nav-item[href="${targetHref}"]`).forEach(link => {
+            link.classList.add('active');
+        });
+
+        // إغلاق قائمة الجوال برمجياً بعد الضغط
+        const mobileNav = document.getElementById('mobile-nav');
+        if (mobileNav) {
+            mobileNav.classList.replace('max-h-[500px]', 'max-h-0'); // أو التعديل حسب كلاساتك
+            mobileNav.classList.replace('opacity-100', 'opacity-0');
+        }
     });
 });
